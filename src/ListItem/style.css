@@ -20,7 +20,7 @@
   justify-content: flex-end;
 }
 
-.list-item--toolbar-on > .list-item__toolbar {
+.list-item--expanded > .list-item__toolbar {
   display: flex;
 }
 
@@ -37,11 +37,11 @@
   justify-content: space-between;
 }
 
-.list-item--toolbar-on > .list-item__main {
+.list-item--expanded > .list-item__body {
   display: none;
 }
 
-.list-item__form {
+.list-item__detail {
   flex: 1 0 100%;
   display: none;
   order: 5;
@@ -49,8 +49,8 @@
   margin-top: 0.5rem;
 }
 
-.list-item--toolbar-on > .list-item__form {
-  display: inline-block;
+.list-item--expanded > .list-item__detail {
+  display: block;
 }
 
 .product-input {
