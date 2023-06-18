@@ -27,7 +27,7 @@ export const ShopList = (props) => {
     </form>
     <div class="shoplist__items"></div>
   `;
-  
+
   if (dayResult === 'loading') {
     fetch(`https://nakupy.kodim.app/api/me/week/${day}`, {
       method: 'GET',
@@ -50,7 +50,7 @@ export const ShopList = (props) => {
 
   const handleAdd = (e) => {
     e.preventDefault();
-  
+
     const productInput = element.querySelector('.product-input');
     const amountInput = element.querySelector('.amount-input');
     const unitInput = element.querySelector('.unit-input');
@@ -69,7 +69,8 @@ export const ShopList = (props) => {
     })
       .then((response) => response.json())
       .then((data) => {
-        element.replaceWith(ShopList({ day, dayResult: data.result }))
+        console.log('123');
+        element.replaceWith(ShopList({ day, dayResult: data.result }));
       });
   };
 
@@ -77,8 +78,8 @@ export const ShopList = (props) => {
 
   const itemsElement = element.querySelector('.shoplist__items');
   itemsElement.append(
-    ...dayResult.items.map((item) => ListItem({ day: day, item: item })
-  ));
+    ...dayResult.items.map((item) => ListItem({ day: day, item: item, expanded: false })
+    ));
 
   return element;
 };

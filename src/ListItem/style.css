@@ -85,7 +85,23 @@
 }
 
 .btn-menu {
+  /*
   background-image: url(img/dots.svg);
+  */
+}
+
+.btn-menu--expanded {
+  background-image: url(img/arrow-up.svg);
+  height: 20px;
+  width: 20px;
+  background-size: cover;
+}
+
+.btn-menu--wrapped {
+  background-image: url(img/arrow-down.svg);
+  height: 20px;
+  width: 20px;
+  background-size: cover;
 }
 
 .btn-delete {
